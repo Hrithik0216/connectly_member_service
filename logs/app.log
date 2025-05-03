@@ -83,3 +83,8 @@
 25/02/22 17:49:53 INFO controller.AuthController: Attempting authentication for: test2@google.com
 25/02/22 17:49:53 INFO controller.AuthController: user found
 25/02/22 17:49:53 INFO controller.AuthController: Password does not match!
+25/05/03 17:44:54 INFO controller.AuthController: Attempting authentication for: hrithiktesting@google.com
+25/05/03 17:45:25 INFO controller.AuthController: Authentication failed: Timed out while waiting for a server that matches ReadPreferenceServerSelector{readPreference=primary}. Client view of cluster state is {type=REPLICA_SET, servers=[{address=ac-3onwxms-shard-00-00.m321jgb.mongodb.net:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketWriteException: Exception sending message}, caused by {javax.net.ssl.SSLException: Received fatal alert: internal_error}}, {address=ac-3onwxms-shard-00-02.m321jgb.mongodb.net:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketWriteException: Exception sending message}, caused by {javax.net.ssl.SSLException: Received fatal alert: internal_error}}, {address=ac-3onwxms-shard-00-01.m321jgb.mongodb.net:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketWriteException: Exception sending message}, caused by {javax.net.ssl.SSLException: Received fatal alert: internal_error}}]
+25/05/03 17:46:34 INFO controller.AuthController: Attempting authentication for: hrithiktesting@google.com
+25/05/03 17:46:48 INFO controller.AuthController: user found
+25/05/03 17:46:49 INFO controller.AuthController: JWT is generated to the usermail hrithiktesting@google.com

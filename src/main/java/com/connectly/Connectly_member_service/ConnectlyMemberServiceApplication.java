@@ -10,7 +10,7 @@ public class ConnectlyMemberServiceApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(ConnectlyMemberServiceApplication.class, args);
-		String log4jConfPath = "D:/Connectly Member Service/Connectly-member-service/src/main/resources/log4j.properties";
+		String log4jConfPath = "/home/hrithik/Desktop/Connectly/connectly_member_service/src/main/resources/log4j.properties";
 		PropertyConfigurator.configure(log4jConfPath);
 
 		PropertyConfigurator.configure(log4jConfPath);
