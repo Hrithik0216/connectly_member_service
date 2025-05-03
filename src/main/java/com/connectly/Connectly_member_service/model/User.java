@@ -36,6 +36,16 @@ public class User {
     private int noOfSequencecs;
     private String nextBillingCycle;
     private String autoLoginKey;
+    private String apiToken;
+
+    public String getApiToken() {
+        return apiToken;
+    }
+
+    public void setApiToken(String apiToken) {
+        this.apiToken = apiToken;
+    }
+
 
     public String getAutoLoginKey() {
         return autoLoginKey;

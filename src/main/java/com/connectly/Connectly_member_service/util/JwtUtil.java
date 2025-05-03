@@ -21,27 +21,17 @@ public class JwtUtil {
     @Value("86400000")
     private long EXPIRATION_TIME;
 
-//    @PostConstruct
-//    public void init() {
-//        if (SECRET_KEY == null || SECRET_KEY.isEmpty()) {
-//            throw new IllegalStateException("JWT Secret Key is not set!");
-//        }
-//        System.out.println("Using JWT Secret Key: " + SECRET_KEY);
-//    }
 
-    public String generateToken(UserDetails userDetails) {
+    public String generateToken(UserDetails userDetails, String apiToken, List<String> roles) {
         Map<String, Object> claims = new HashMap<>();
 
-        // Convert roles into a simple list of strings
-        List<String> roles = userDetails.getAuthorities().stream()
-                .map(authority -> authority.getAuthority())
-                .collect(Collectors.toList());
         claims.put("roles", roles);
+        claims.put("apiToken",apiToken);
 
         return createToken(claims, userDetails.getUsername());
     }
 
-    public String generateAutoLoginKey(){
+    public String generateAutoLoginKey() {
         return UUID.randomUUID().toString();
     }
 

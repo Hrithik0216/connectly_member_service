@@ -10,6 +10,7 @@ import com.connectly.Connectly_member_service.util.AuthEntryPointJwt;
 import com.connectly.Connectly_member_service.util.JwtUtil;
 import com.connectly.Connectly_member_service.utils.dateTime.DateTimePatternConverter;
 import com.connectly.Connectly_member_service.utils.emailValidation.MailValidation;
+import org.bson.types.ObjectId;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -56,7 +57,6 @@ public class AuthController {
             // Verify user exists
             User user = userRepository.findByEmail(authRequest.getEmail())
                     .orElseThrow(() -> new UsernameNotFoundException("User not found: " + authRequest.getEmail()));
-//            System.out.println("Stored encoded password: " + user.getPassword());
             LOGGER.info("user found");
 
             // Verify password matches
@@ -73,8 +73,7 @@ public class AuthController {
 
             // Load user details and generate JWT token
             UserDetails userDetails = userDetailsService.loadUserByUsername(authRequest.getEmail());
-            String jwt = jwtUtil.generateToken(userDetails);
-//          System.out.println("JWT Token generated: " + jwt);
+            String jwt = jwtUtil.generateToken(userDetails, user.getApiToken(),user.getRoles());
             AuthResponse authResponse = new AuthResponse();
             authResponse.setJwt(jwt);
             LOGGER.info("JWT is generated to the usermail "+user.getEmail());
@@ -150,6 +149,8 @@ public class AuthController {
         user.setNoOfSequencecs(1000);
         user.setConfirmPassword("");
         user.setAutoLoginKey(autoLoginKey);
+        user.setApiToken(new ObjectId().toString());
+        user.setRoles(user.getRoles());
         userRepository.save(user);
         LOGGER.info( user.getEmail()+". User registered successfully");
         return ResponseEntity.status(HttpStatus.CREATED).body("User registered successfully");
