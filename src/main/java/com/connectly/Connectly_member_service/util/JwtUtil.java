@@ -1,5 +1,6 @@
 package com.connectly.Connectly_member_service.util;
 
+import com.connectly.Connectly_member_service.model.User;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
@@ -22,12 +23,12 @@ public class JwtUtil {
     private long EXPIRATION_TIME;
 
 
-    public String generateToken(UserDetails userDetails, String apiToken, List<String> roles) {
+    public String generateToken(UserDetails userDetails, String apiToken, List<String> roles, String email) {
         Map<String, Object> claims = new HashMap<>();
 
         claims.put("roles", roles);
         claims.put("apiToken",apiToken);
-
+        claims.put("userEmail",email);
         return createToken(claims, userDetails.getUsername());
     }
 

@@ -73,7 +73,7 @@ public class AuthController {
 
             // Load user details and generate JWT token
             UserDetails userDetails = userDetailsService.loadUserByUsername(authRequest.getEmail());
-            String jwt = jwtUtil.generateToken(userDetails, user.getApiToken(),user.getRoles());
+            String jwt = jwtUtil.generateToken(userDetails, user.getApiToken(),user.getRoles(), user.getEmail());
             AuthResponse authResponse = new AuthResponse();
             authResponse.setJwt(jwt);
             LOGGER.info("JWT is generated to the usermail "+user.getEmail());

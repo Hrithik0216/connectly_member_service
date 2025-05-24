@@ -92,3 +92,27 @@
 25/05/03 19:05:04 INFO controller.AuthController: Attempting authentication for: hrithikshanmu2@google.com
 25/05/03 19:05:04 INFO controller.AuthController: user found
 25/05/03 19:05:04 INFO controller.AuthController: JWT is generated to the usermail hrithikshanmu2@google.com
+25/05/03 20:17:24 INFO controller.AuthController: Attempting authentication for: hrithikshanmu2@google.com
+25/05/03 20:17:24 INFO controller.AuthController: user found
+25/05/03 20:17:25 INFO controller.AuthController: JWT is generated to the usermail hrithikshanmu2@google.com
+25/05/03 21:30:52 INFO controller.AuthController: Attempting authentication for: hrithikshanmu2@google.com
+25/05/03 21:30:52 INFO controller.AuthController: user found
+25/05/03 21:30:52 INFO controller.AuthController: JWT is generated to the usermail hrithikshanmu2@google.com
+25/05/04 14:07:29 INFO controller.AuthController: Attempting authentication for: hrithiktesting@google.com
+25/05/04 14:07:29 INFO controller.AuthController: user found
+25/05/04 14:07:29 INFO controller.AuthController: JWT is generated to the usermail hrithiktesting@google.com
+25/05/04 14:13:30 INFO controller.AuthController: hrithik@google.com. User registered successfully
+25/05/04 14:13:43 INFO controller.AuthController: Attempting authentication for: hrithik@google.com
+25/05/04 14:13:43 INFO controller.AuthController: user found
+25/05/04 14:13:43 INFO controller.AuthController: JWT is generated to the usermail hrithik@google.com
+25/05/24 16:54:14 INFO controller.AuthController: hrithik3285@gmail.com. User registered successfully
+25/05/24 16:54:18 INFO controller.AuthController: hrithik3285@gmail.com. Email already exists!
+25/05/24 16:54:36 INFO controller.AuthController: Attempting authentication for: hrithik3285@gmail.com
+25/05/24 16:54:36 INFO controller.AuthController: user found
+25/05/24 16:54:37 INFO controller.AuthController: JWT is generated to the usermail hrithik3285@gmail.com
+25/05/24 17:01:38 INFO controller.AuthController: Attempting authentication for: hrithik@google.com
+25/05/24 17:01:38 INFO controller.AuthController: user found
+25/05/24 17:01:39 INFO controller.AuthController: JWT is generated to the usermail hrithik@google.com
+25/05/24 17:07:01 INFO controller.AuthController: Attempting authentication for: hrithik3285@gmail.com
+25/05/24 17:07:01 INFO controller.AuthController: user found
+25/05/24 17:07:01 INFO controller.AuthController: JWT is generated to the usermail hrithik3285@gmail.com
